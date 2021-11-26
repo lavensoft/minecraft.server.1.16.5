@@ -1,0 +1,224 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 11/26/21 3:18 PM
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraft.entity.ai.controller.LookController.func_75651_a(SourceFile:31) ~[?:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.func_75246_d(MeleeAttackGoal.java:98) ~[?:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.entity.ai.goal.PrioritizedGoal.func_75246_d(SourceFile:55) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.Iterator.forEachRemaining(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source) ~[?:1.8.0_311] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_75774_a(SourceFile:88) ~[?:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dungeons_mobs.mixins.json:GoalSelectorAccessor,pl:mixin:APP:charm.mixins.json:accessor.GoalSelectorAccessor,pl:mixin:A}
+	at net.minecraft.entity.MobEntity.func_70626_be(MobEntity.java:682) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70636_d(LivingEntity.java:2411) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:environmental.mixins.json:LivingEntityMixin,pl:mixin:APP:supplementaries.mixins.json:LivingEntityMixin,pl:mixin:APP:eidolon.mixins.json:LivingEntityMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:charm.mixins.json:LivingEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70636_d(MobEntity.java:488) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.AgeableEntity.func_70636_d(SourceFile:127) ~[?:?] {re:mixin,re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.func_70636_d(AnimalEntity.java:51) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:charm.mixins.json:AnimalEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2158) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:environmental.mixins.json:LivingEntityMixin,pl:mixin:APP:supplementaries.mixins.json:LivingEntityMixin,pl:mixin:APP:eidolon.mixins.json:LivingEntityMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:charm.mixins.json:LivingEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:APP:charm.mixins.json:ServerWorldMixin,pl:mixin:APP:charm.mixins.json:accessor.ServerWorldAccessor,pl:mixin:APP:cavesandcliffs.mixins.json:common.world.gen.ServerWorldMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:APP:charm.mixins.json:ServerWorldMixin,pl:mixin:APP:charm.mixins.json:accessor.ServerWorldAccessor,pl:mixin:APP:cavesandcliffs.mixins.json:common.world.gen.ServerWorldMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_311] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.entity.ai.controller.LookController.func_75651_a(SourceFile:31) ~[?:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.func_75246_d(MeleeAttackGoal.java:98) ~[?:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at net.minecraft.entity.ai.goal.PrioritizedGoal.func_75246_d(SourceFile:55) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.Iterator.forEachRemaining(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source) ~[?:1.8.0_311] {}
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source) ~[?:1.8.0_311] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_75774_a(SourceFile:88) ~[?:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dungeons_mobs.mixins.json:GoalSelectorAccessor,pl:mixin:APP:charm.mixins.json:accessor.GoalSelectorAccessor,pl:mixin:A}
+	at net.minecraft.entity.MobEntity.func_70626_be(MobEntity.java:682) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70636_d(LivingEntity.java:2411) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:environmental.mixins.json:LivingEntityMixin,pl:mixin:APP:supplementaries.mixins.json:LivingEntityMixin,pl:mixin:APP:eidolon.mixins.json:LivingEntityMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:charm.mixins.json:LivingEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70636_d(MobEntity.java:488) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.AgeableEntity.func_70636_d(SourceFile:127) ~[?:?] {re:mixin,re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.func_70636_d(AnimalEntity.java:51) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:charm.mixins.json:AnimalEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2158) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:environmental.mixins.json:LivingEntityMixin,pl:mixin:APP:supplementaries.mixins.json:LivingEntityMixin,pl:mixin:APP:eidolon.mixins.json:LivingEntityMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:charm.mixins.json:LivingEntityMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:environmental.mixins.json:MobEntityMixin,pl:mixin:APP:charm.mixins.json:accessor.MobEntityAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:APP:charm.mixins.json:ServerWorldMixin,pl:mixin:APP:charm.mixins.json:accessor.ServerWorldAccessor,pl:mixin:APP:cavesandcliffs.mixins.json:common.world.gen.ServerWorldMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+-- Entity being ticked --
+Details:
+	Entity Type: village_employment:illager_minion (net.mcreator.villageemployment.entity.IllagerMinionEntity.CustomEntity)
+	Entity ID: 9453
+	Entity Name: Illager Minion
+	Entity's Exact location: -569.43, 63.00, 134.78
+	Entity's Block location: World: (-570,63,134), Chunk: (at 6,3,6 in -36,8; contains blocks -576,0,128 to -561,255,143), Region: (-2,0; contains chunks -64,0 to -33,31, blocks -1024,0,0 to -513,255,511)
+	Entity's Momentum: -0.13, -0.08, -0.06
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:APP:charm.mixins.json:ServerWorldMixin,pl:mixin:APP:charm.mixins.json:accessor.ServerWorldAccessor,pl:mixin:APP:cavesandcliffs.mixins.json:common.world.gen.ServerWorldMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+
+
+-- Affected level --
+Details:
+	All players: 2 total; [ServerPlayerEntity['NhatsDevil'/305, l='ServerLevel[world]', x=-569.85, y=63.23, z=133.95], ServerPlayerEntity['VuSadBoy'/3037, l='ServerLevel[world]', x=-574.17, y=63.00, z=137.09]]
+	Chunk stats: ServerChunkCache: 3091
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-128,70,96), Chunk: (at 0,4,0 in -8,6; contains blocks -128,0,96 to -113,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 51267 game time, 7581 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 103166 (now: false), thunder time: 147767 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:charm.mixins.json:accessor.MinecraftServerAccessor,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_311] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (x86) version 10.0
+	Java Version: 1.8.0_311, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 6875592 bytes (6 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.19.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.19.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.19.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.19.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.19.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.19
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+		kotlinforforge@1.15.1
+	Mod List: 
+		mowziesmobs-1.5.19.jar                            |Mowzie's Mobs                 |mowziesmobs                   |1.5.19              |DONE      |Manifest: NOSIGNATURE
+		BetterDungeons-1.16.4-1.2.1.jar                   |YUNG's Better Dungeons        |betterdungeons                |1.16.4-1.2.1        |DONE      |Manifest: NOSIGNATURE
+		jei-1.16.5-7.7.1.137.jar                          |Just Enough Items             |jei                           |7.7.1.137           |DONE      |Manifest: NOSIGNATURE
+		The_Graveyard_1.0_(FORGE)_for_1.16.4-1.16.5.jar   |The Graveyard (FORGE)         |graveyard                     |1.0                 |DONE      |Manifest: NOSIGNATURE
+		the-conjurer-1.16.4-1.0.13.jar                    |The Conjurer                  |conjurer_illager              |1.0.13              |DONE      |Manifest: NOSIGNATURE
+		dungeons_mobs-1.16.5-1.0.10.jar                   |Dungeons Mobs                 |dungeons_mobs                 |1.0.10              |DONE      |Manifest: NOSIGNATURE
+		abnormals_core-1.16.5-3.3.0.jar                   |Abnormals Core                |abnormals_core                |3.3.0               |DONE      |Manifest: NOSIGNATURE
+		goblintraders-1.6.0-1.16.3.jar                    |Goblin Traders                |goblintraders                 |1.6.0               |DONE      |Manifest: NOSIGNATURE
+		kingvillager-1.6.2.jar                            |The King of the villagers     |kingvillager                  |1.6.2               |DONE      |Manifest: NOSIGNATURE
+		Kobolds-1.4.8.jar                                 |Kobolds                       |kobolds                       |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		KleeSlabs_1.16.5-9.2.1.jar                        |KleeSlabs                     |kleeslabs                     |9.2.1               |DONE      |Manifest: NOSIGNATURE
+		Better-Badlands-1.16.5-2.0.3.jar                  |Better Badlands               |better_badlands               |1.16.5-2.0.3        |DONE      |Manifest: NOSIGNATURE
+		Waystones_1.16.5-7.6.3.jar                        |Waystones                     |waystones                     |7.6.3               |DONE      |Manifest: NOSIGNATURE
+		villagernames_1.16.5-3.3.jar                      |Villager Names                |villagernames                 |3.3                 |DONE      |Manifest: NOSIGNATURE
+		XaerosWorldMap_1.18.0_Forge_1.16.5.jar            |Xaero's World Map             |xaeroworldmap                 |1.18.0              |DONE      |Manifest: NOSIGNATURE
+		village-employment-1.16.5-1.4.1.jar               |Village Employment            |village_employment            |1.4.1               |DONE      |Manifest: NOSIGNATURE
+		citadel-1.8.1-1.16.5.jar                          |Citadel                       |citadel                       |1.8.1               |DONE      |Manifest: NOSIGNATURE
+		alexsmobs-1.12.1.jar                              |Alex's Mobs                   |alexsmobs                     |1.12.1              |DONE      |Manifest: NOSIGNATURE
+		campful-1.16.5-3.1.0.jar                          |Campful                       |campful                       |2.0                 |DONE      |Manifest: NOSIGNATURE
+		farmersdelightintegrations-1.16.5-1.2.jar         |Farmer's Delight Compats      |farmersdelightintegrations    |1.16.5-1.2          |DONE      |Manifest: NOSIGNATURE
+		YungsApi-1.16.4-Forge-13.jar                      |YUNG's API                    |yungsapi                      |1.16.4-Forge-13     |DONE      |Manifest: NOSIGNATURE
+		stoneholm-1.2.2.jar                               |Stoneholm                     |stoneholm                     |1.2                 |DONE      |Manifest: NOSIGNATURE
+		pyromancer 1.6.3.jar                              |Pyromancer                    |pyromancer                    |1.6.3               |DONE      |Manifest: NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |DONE      |Manifest: NOSIGNATURE
+		environmental-1.16.5-1.1.0.jar                    |Environmental                 |environmental                 |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		Bookshelf-Forge-1.16.5-10.3.29.jar                |Bookshelf                     |bookshelf                     |10.3.29             |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		BadMobs-1.16.5-9.0.3.jar                          |BadMobs                       |badmobs                       |9.0.3               |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		sophisticatedbackpacks-1.16.5-3.8.1.384.jar       |Sophisticated Backpacks       |sophisticatedbackpacks        |1.16.5-3.8.1.384    |DONE      |Manifest: NOSIGNATURE
+		guardvillagers-1.16.5.1.2.6.jar                   |Guard Villagers               |guardvillagers                |1.2.6               |DONE      |Manifest: NOSIGNATURE
+		outvoted-1.16.5-1.2.4.jar                         |Outvoted                      |outvoted                      |1.2.4               |DONE      |Manifest: NOSIGNATURE
+		Hwyla-forge-1.10.11-B78_1.16.2.jar                |Waila                         |waila                         |1.10.11-B78_1.16.2  |DONE      |Manifest: NOSIGNATURE
+		SnowRealMagic-1.16.4-2.7.2.jar                    |Snow! Real Magic!             |snowrealmagic                 |2.7.2               |DONE      |Manifest: NOSIGNATURE
+		Kiwi-1.16.5-3.6.0.jar                             |Kiwi                          |kiwi                          |3.6.0               |DONE      |Manifest: NOSIGNATURE
+		what_did_you_vote_for-1.16.5-1.0.5.jar            |What Did You Vote For?        |whatareyouvotingfor           |1.0                 |DONE      |Manifest: NOSIGNATURE
+		carryon-1.16.5-1.15.5.15.jar                      |Carry On                      |carryon                       |1.15.5.15           |DONE      |Manifest: 8c:03:ac:7d:21:62:65:e2:83:91:f3:22:57:99:ed:75:78:1e:db:de:03:99:ef:53:3b:59:95:18:01:bc:84:a9
+		Wandering-Bag-1.16.5-1.0.2.jar                    |Wandering Bag                 |wandering_bag                 |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.19-universal.jar                |Forge                         |forge                         |36.2.19             |DONE      |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		supplementaries-1.16.5-0.17.7.jar                 |Supplementaries               |supplementaries               |1.16.5-0.17.2       |DONE      |Manifest: NOSIGNATURE
+		konkrete_1.3.0_MC_1.16.2-1.16.5.jar               |Konkrete                      |konkrete                      |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		UnofficialWildUpdate1.19v0.2.jar                  |Wild Update Unofficial        |wild_update_unofficial        |1.1                 |DONE      |Manifest: NOSIGNATURE
+		structure_gel-1.16.5-1.7.8.jar                    |Structure Gel API             |structure_gel                 |1.7.8               |DONE      |Manifest: NOSIGNATURE
+		selene-1.16.5-1.9.0.jar                           |Selene                        |selene                        |1.16.5-1.0          |DONE      |Manifest: NOSIGNATURE
+		corpse-1.16.5-1.0.6.jar                           |Corpse                        |corpse                        |1.16.5-1.0.6        |DONE      |Manifest: NOSIGNATURE
+		DungeonsArise-1.16.5-2.1.47-release.jar           |When Dungeons Arise           |dungeons_arise                |2.1.47              |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.19-server.jar                   |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: NOSIGNATURE
+		Sons-of-Sins-Mod-1.16.5.jar                       |sons of sins                  |sons_of_sins                  |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		FarmersDelight-1.16.5-0.5.1.jar                   |Farmer's Delight              |farmersdelight                |1.16.5-0.5.1        |DONE      |Manifest: NOSIGNATURE
+		repurposed_structures_forge-3.4.0+1.16.5.jar      |Repurposed Structures         |repurposed_structures         |3.4.0+1.16.5        |DONE      |Manifest: NOSIGNATURE
+		morevillagers-FORGE-1.16.5-1.5.5.jar              |More Villagers                |morevillagers                 |1.5.5               |DONE      |Manifest: NOSIGNATURE
+		EnchantmentDescriptions-1.16.5-7.0.12.jar         |EnchantmentDescriptions       |enchdesc                      |7.0.12              |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		dungeons_plus-1.16.5-1.1.5.jar                    |Dungeons Plus                 |dungeons_plus                 |1.1.5               |DONE      |Manifest: NOSIGNATURE
+		decorative_blocks_abnormals-1.2.jar               |Decorative Blocks Abnormals   |decorative_blocks_abnormals   |1.2                 |DONE      |Manifest: NOSIGNATURE
+		CavesAndCliffsBackport-1.16.5-6.3.jar             |Caves & Cliffs Backport       |cavesandcliffs                |6.3                 |DONE      |Manifest: NOSIGNATURE
+		farmersdelightintegration-1.16.5-1.0.3.jar        |Farmer's Delight Integration  |farmersdelightintegration     |1.16.5-1.0.3        |DONE      |Manifest: NOSIGNATURE
+		darkerdepths-1.16.5-1.1.4.jar                     |Darker Depths                 |darkerdepths                  |1.1.4               |DONE      |Manifest: NOSIGNATURE
+		atmospheric-1.16.5-3.1.0.jar                      |Atmospheric                   |atmospheric                   |3.1.0               |DONE      |Manifest: NOSIGNATURE
+		Bountiful-1.16.4-3.3.1.jar                        |Bountiful                     |bountiful                     |1.16.4-3.3.1        |DONE      |Manifest: NOSIGNATURE
+		CNB-1.16.3_5-1.2.11.jar                           |Creatures and Beasts          |cnb                           |1.2.11              |DONE      |Manifest: NOSIGNATURE
+		curios-forge-1.16.5-4.0.5.3.jar                   |Curios API                    |curios                        |1.16.5-4.0.5.3      |DONE      |Manifest: NOSIGNATURE
+		eidolon-0.2.7.jar                                 |Eidolon                       |eidolon                       |0.2.7               |DONE      |Manifest: NOSIGNATURE
+		omnis-1.16.5-1.1.2.3.jar                          |Omnis                         |omnis                         |1.16.5-1.0          |DONE      |Manifest: NOSIGNATURE
+		Xaeros_Minimap_21.20.0_Forge_1.16.5.jar           |Xaero's Minimap               |xaerominimap                  |21.20.0             |DONE      |Manifest: NOSIGNATURE
+		collective-1.16.5-2.64.jar                        |Collective                    |collective                    |2.64                |DONE      |Manifest: NOSIGNATURE
+		abnormals_delight-1.16.5-1.2.0.jar                |Abnormals Delight             |abnormals_delight             |1.2.0               |DONE      |Manifest: NOSIGNATURE
+		villagertools-1.16.5-1.0.1.jar                    |villagertools                 |villagertools                 |1.16.5-1.0.1        |DONE      |Manifest: 1f:47:ac:b1:61:82:96:b8:47:19:16:d2:61:81:11:60:3a:06:4b:61:31:56:7d:44:31:1e:0c:6f:22:5b:4c:ed
+		Regrowth-1.16.4-1.16.5-1.36.0.24a.jar             |Regrowth Mod                  |regrowth                      |1.16.5-1.36.0.24a   |DONE      |Manifest: NOSIGNATURE
+		obfuscate-0.6.2-1.16.3.jar                        |Obfuscate                     |obfuscate                     |0.6.2               |DONE      |Manifest: e1:59:1a:56:ec:97:b3:d0:b3:4b:25:06:1f:83:b0:f4:fd:0c:24:e3:6d:ea:94:b1:9f:22:b0:38:13:60:88:ea
+		BetterStrongholds-1.16.4-1.2.1.jar                |YUNG's Better Strongholds     |betterstrongholds             |1.16.4-1.2.1        |DONE      |Manifest: NOSIGNATURE
+		cavebiomeapi-1.16.5-1.3.7.jar                     |CaveBiomeAPI                  |cavebiomeapi                  |1.3.7               |DONE      |Manifest: NOSIGNATURE
+		HunterIllager-1.16.5-1.4.0.jar                    |Hunter Illager                |hunterillager                 |1.16.5-1.4.0        |DONE      |Manifest: NOSIGNATURE
+		cloth-config-4.11.26-forge.jar                    |Cloth Config v4 API           |cloth-config                  |4.11.26             |DONE      |Manifest: NOSIGNATURE
+		enhancedcelestials-2.0.8-1.16.5.jar               |Enhanced Celestials           |enhancedcelestials            |2.0.8-1.16.5        |DONE      |Manifest: NOSIGNATURE
+		enchantwithmob-1.16.5-1.5.1.jar                   |Enchant With Mob              |enchantwithmob                |1.16.5-1.5.1        |DONE      |Manifest: NOSIGNATURE
+		illagersweararmor-1.0.5.jar                       |Illagers Wear Armor           |illagersweararmor             |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		smallships-1.16.5-1.10.3.jar                      |Small Ships Mod               |smallships                    |1.10.3              |DONE      |Manifest: NOSIGNATURE
+		charm-forge-1.16.5-2.3.2.jar                      |Charm                         |charm                         |2.3.2               |DONE      |Manifest: NOSIGNATURE
+		valhelsia_core-16.0.13a.jar                       |Valhelsia Core                |valhelsia_core                |16.0.13a            |DONE      |Manifest: NOSIGNATURE
+		valhelsia_structures-1.16.5-0.1.6.jar             |Valhelsia Structures          |valhelsia_structures          |1.16.5-0.1.6        |DONE      |Manifest: NOSIGNATURE
+		BetterMineshafts-Forge-1.16.4-2.0.4.jar           |YUNG's Better Mineshafts      |bettermineshafts              |1.16.4-2.0.4        |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.16.5-3.0.51.jar                  |GeckoLib                      |geckolib3                     |3.0.51              |DONE      |Manifest: NOSIGNATURE
+		StupidWeapons+v1.8.2+-+1.16.5+forge.jar           |Stupid Weapons                |stupid_weapons                |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		effortlessbuilding-1.16.3-2.23.jar                |Effortless Building           |effortlessbuilding            |1.16.3-2.23         |DONE      |Manifest: NOSIGNATURE
+		BetterAdvancements-1.16.5-0.1.1.115.jar           |Better Advancements           |betteradvancements            |0.1.1.115           |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 4e01cbf5-e8a8-44da-be5b-bd826d458554
+	Kiwi Modules: 
+		
+	Player Count: 2 / 20; [ServerPlayerEntity['NhatsDevil'/305, l='ServerLevel[world]', x=-569.85, y=63.23, z=133.95], ServerPlayerEntity['VuSadBoy'/3037, l='ServerLevel[world]', x=-574.17, y=63.00, z=137.09]]
+	Data Packs: vanilla, mod:mowziesmobs (incompatible), mod:betterdungeons, mod:jei, mod:graveyard, mod:conjurer_illager (incompatible), mod:dungeons_mobs (incompatible), mod:abnormals_core, mod:goblintraders, mod:kingvillager, mod:kobolds, mod:kleeslabs (incompatible), mod:better_badlands, mod:waystones (incompatible), mod:villagernames, mod:xaeroworldmap, mod:village_employment, mod:citadel (incompatible), mod:alexsmobs, mod:campful, mod:farmersdelightintegrations, mod:yungsapi, mod:stoneholm, mod:pyromancer, mod:decorative_blocks, mod:environmental, mod:bookshelf, mod:badmobs (incompatible), mod:sophisticatedbackpacks, mod:guardvillagers, mod:outvoted, mod:waila, mod:snowrealmagic, mod:kiwi, mod:whatareyouvotingfor, mod:carryon, mod:wandering_bag, mod:forge, mod:supplementaries, mod:konkrete, mod:wild_update_unofficial, mod:structure_gel, mod:selene, mod:corpse, mod:dungeons_arise, mod:sons_of_sins, mod:farmersdelight, mod:repurposed_structures, mod:morevillagers, mod:enchdesc, mod:dungeons_plus, mod:decorative_blocks_abnormals, mod:cavesandcliffs (incompatible), mod:farmersdelightintegration, mod:darkerdepths, mod:atmospheric, mod:bountiful (incompatible), mod:cnb, mod:curios, mod:eidolon, mod:omnis, mod:xaerominimap, mod:collective, mod:abnormals_delight, mod:villagertools, mod:regrowth, mod:obfuscate (incompatible), mod:betterstrongholds, mod:cavebiomeapi, mod:hunterillager, mod:cloth-config (incompatible), mod:enhancedcelestials, mod:enchantwithmob, mod:illagersweararmor (incompatible), mod:smallships, mod:charm, mod:valhelsia_core, mod:valhelsia_structures, mod:bettermineshafts, mod:geckolib3 (incompatible), mod:stupid_weapons, mod:effortlessbuilding (incompatible), mod:betteradvancements
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
